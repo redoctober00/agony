@@ -53,23 +53,23 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
 .image-container2 {
-  /* place the image as a section-level background rather than a global fixed element */
-  position: absolute; /* will sit inside .section (which is position: relative) */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 220px; /* desktop default height for the section background */
-  z-index: -1;
+  width: 50%;
+  height: 10%;
+  z-index: -10;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.image-container2 img {
-  width: 100%;
-  height: 100%;
+.image-container2 {
+  width: 50%;
+  height: 50%;
   object-fit: cover;
   object-position: center;
 }
@@ -197,7 +197,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.grid {
+.grid-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -242,47 +242,14 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  /* Mobile typography tweaks */
   h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
-
-  /* Reduce section padding and make backgrounds smaller on mobile */
   .section {
+    margin: 40px 0;
     padding: 20px;
-    margin: 30px 0;
   }
-
-  /* Stack grid into single column if needed */
-  .grid {
+  .grid-tems {
     grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  /* Make fixed large background images less dominant on small screens */
-  .image-container,
-  .image-container3,
-  .image-container4,
-  .image-container1 {
-    position: absolute;
-    width: 120%; /* slightly oversize but positioned behind */
-    height: 120%;
-    opacity: 0.6;
-    transform: translateY(-10%);
-    z-index: -2;
-    display: none; /* hide heavy fixed elements to preserve mobile performance and readability */
-  }
-
-  /* Keep the section-level image visible but much shorter */
-  .image-container2 {
-    position: absolute;
-    height: 140px;
-    left: 0;
-    right: 0;
-  }
-
-  .about-text {
-    font-size: 1em;
-    line-height: 1.6;
   }
 }
