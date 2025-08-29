@@ -202,7 +202,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.grid {
+.grid-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -253,7 +253,7 @@ h2 {
     margin: 40px 0;
     padding: 20px;
   }
-  grid {
+  grid-items {
     grid-template-columns: 1fr;
   }
   
