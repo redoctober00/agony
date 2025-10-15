@@ -1,4 +1,4 @@
-// Cursor trail effect
+// trail 
 let mouseX = 0;
 let mouseY = 0;
 const trails = [];
@@ -23,7 +23,7 @@ document.addEventListener("mousemove", (e) => {
   }, 500);
 });
 
-// Random glitch effects
+// glitch effects
 setInterval(() => {
   const elements = document.querySelectorAll("h1, h2");
   const randomElement = elements[Math.floor(Math.random() * elements.length)];
@@ -33,7 +33,7 @@ setInterval(() => {
   }, 100);
 }, 3000);
 
-// Add fadeOut animation
+// fadeout animation
 const style = document.createElement("style");
 style.textContent = `
             @keyframes fadeOut {
